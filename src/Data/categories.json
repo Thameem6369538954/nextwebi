@@ -1,0 +1,31 @@
+[
+
+  {
+    "title": "Women's Dress",
+    "label": "Recommended for You",
+    "category": "women",
+    "colSpan": "md:col-span-1",
+    "rowSpan": "md:row-span-2",
+    "button": true
+  },
+  {
+    "title": "Men's Dress",
+    "label": "Women's Eyewear",
+    "category": "men",
+    "colSpan": "md:col-span-1",
+    "rowSpan": "md:row-span-2",
+    "button": true
+  },
+  {
+    "title": "Shoes",
+    "label": "Shop By",
+    "category": "shoes",
+    "button": true
+  },
+  {
+    "title": "Watch",
+    "label": "Shop By",
+    "category": "watch",
+    "button": true
+  }
+]

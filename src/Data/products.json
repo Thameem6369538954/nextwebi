@@ -1,0 +1,110 @@
+
+
+[
+  {
+    "id": 1,
+    "title": "Men's Blue Shirt",
+    "category": "men",
+    "price": "₹1299",
+    "image": "/ProductImg/asas.jpg"
+  },
+  {
+    "id": 2,
+       "title": "Women's Red Dress",
+    "category": "women",
+    "price": "₹1499",
+    "image": "/ProductImg/beautiful-woman-purple-sweater-skirt.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Leather Shoes",
+    "category": "shoes",
+    "price": "₹2499",
+    "image": "/ProductImg/brown-leather-shoes.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Stylish Watch",
+    "category": "watch",
+    "price": "₹3499",
+    "image": "/ProductImg/Watch.png"
+  },
+  {
+    "id": 5,
+    "title": "Fastnew Watch",
+    "category": "watch",
+    "price": "₹3499",
+    "image": "/ProductImg/close-up-clock-with-time-change.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Taina Watch",
+    "category": "watch",
+    "price": "₹3499",
+    "image": "/ProductImg/beautiful-rendering-steel-object__1_-removebg-preview.png"
+  },
+   {
+    "id": 7,
+    "title": "Men's Dark Green  T-Shirt",
+    "category": "men",
+    "price": "₹1699",
+    "image": "/ProductImg/artist-white.jpg"
+  },
+   {
+    "id": 8,
+    "title": "Men's Blue Jean Shirt",
+    "category": "men",
+    "price": "₹1399",
+    "image": "/ProductImg/portrait-handsome-young-man.jpg"
+  },
+   {
+    "id": 9,
+    "title": "Men's new Blue Shirt",
+    "category": "men",
+    "price": "₹1799",
+    "image": "/ProductImg/abbas.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Women's Red Dress",
+    "category": "women",
+    "price": "₹1499",
+    "image": "/ProductImg/caucasian-standing-front-modern-building-pink-dress-hairband.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Women's Red Dress",
+    "category": "women",
+    "price": "₹1499",
+    "image": "/ProductImg/young-woman-wearing-long-red-dress-white-background.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Women's Red Dress",
+    "category": "women",
+    "price": "₹1499",
+    "image": "/ProductImg/woman-with-hand-her-hair.jpg"
+  },
+  {
+    "id": 13,
+    "title": "HighNeck Shoes",
+    "category": "shoes",
+    "price": "₹2499",
+    "image": "/ProductImg/shoes.jpg"
+  },
+  {
+    "id": 14,
+    "title": "fashion sneakers Shoes",
+    "category": "shoes",
+    "price": "₹2499",
+    "image": "/ProductImg/fashion-shoes-sneakers.jpg"
+  },
+  {
+    "id": 14,
+    "title": "fashion Women Shoes",
+    "category": "shoes",
+    "price": "₹2499",
+    "image": "/ProductImg/men-shoes.jpg"
+  }
+ 
+]

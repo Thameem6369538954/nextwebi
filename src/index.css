@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: "Heading";
+    src: url("../public/Fonts/BebasNeue-Regular.ttf");
+}
+@font-face{
+    font-family: "poppins";
+    src: url("../public/Fonts/Poppins-ExtraLight.ttf");
+}
