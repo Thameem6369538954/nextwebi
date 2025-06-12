@@ -1,5 +1,6 @@
 // components/AboutUs.jsx
 import { motion } from "framer-motion";
+import New from "../assets/CateImg/young-japanese-couple.jpg"
 
 const AboutUs = () => {
   return (
@@ -20,9 +21,9 @@ const AboutUs = () => {
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <img
-          src="/images/about-us.jpg"
+          src={New}
           alt="About Us"
-          className="rounded-2xl shadow-lg object-cover w-full h-96"
+          className="rounded-2xl shadow-lg object-cover w-full h-146"
         />
 
         <div>
