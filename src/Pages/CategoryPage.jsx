@@ -29,7 +29,7 @@ export default function CategoryPage() {
   if (filteredProducts.length === 0) {
     return (
       <motion.div
-        className="p-6 text-center text-red-500 font-[poppins]"
+        className="p-6 text-center text-red-500 font-[poppins] "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -41,7 +41,7 @@ export default function CategoryPage() {
 
   return (
     <motion.div
-      className="p-6"
+      className="p-6 mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

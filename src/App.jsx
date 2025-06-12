@@ -21,7 +21,8 @@ export default function App() {
   }, []);
 
   return (
-    <div ref={scrollRef} data-scroll-container className="bg-white text-black">
+    <div ref={scrollRef} data-scroll-container className="bg-white text-black" 
+    >
       <Navbar />
       <Allrouters />
       <Footer />

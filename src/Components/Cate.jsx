@@ -24,7 +24,7 @@ export default function CategoryGrid() {
   };
 
   return (
-    <div className="w-full px-4 py-16 bg-white">
+    <div id="collections" className="w-full px-4 py-16 bg-white">
       <motion.h2
         className="text-3xl md:text-7xl font-[Heading] text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
@@ -32,7 +32,7 @@ export default function CategoryGrid() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        Our Categories
+        Our Collections
       </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[300px]">

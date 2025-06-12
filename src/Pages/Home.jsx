@@ -10,7 +10,7 @@ import BrandMarquee from '../Components/BrandImg'
 
 const Home = () => {
   return (
-    <div>
+    <div id='home' >
         <Header />
         <CategoryGrid />
         <BrandMarquee />

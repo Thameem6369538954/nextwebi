@@ -1,20 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
+import { Link } from "react-scroll";
 
 const navItems = [
-  { name: "Home" },
-  { name: "New Arrivals" },
-  {
-    name: "Collections",
-    submenu: ["Spring 2025", "Evening Wear", "Casual", "Accessories"],
-  },
+  { name: "Home", scrollTo: "home" },
+  { name: "Collections", scrollTo: "collections" },
+  { name: "New Arrivals", scrollTo: "new-arrivals" },
   {
     name: "Shop",
     submenu: ["Dresses", "Tops", "Bottoms", "Footwear"],
   },
-  { name: "About" },
-  { name: "Contact" },
+  { name: "About", scrollTo: "about" },
+  { name: "Contact", scrollTo: "contact" },
 ];
 
 export default function Navbar() {
@@ -27,17 +25,15 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 font-sans transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/80 backdrop-blur shadow-md" : "bg-transparent"
       }`}
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto font-[poppins]">
@@ -52,10 +48,22 @@ export default function Navbar() {
               onMouseEnter={() => setActiveSubmenu(index)}
               onMouseLeave={() => setActiveSubmenu(null)}
             >
-              <span className="flex items-center gap-1">
-                {item.name}
-                {item.submenu && <HiChevronDown size={16} />}
-              </span>
+              {item.scrollTo ? (
+                <Link
+                  to={item.scrollTo}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="flex items-center gap-1 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <span className="flex items-center gap-1">
+                  {item.name}
+                  {item.submenu && <HiChevronDown size={16} />}
+                </span>
+              )}
 
               {/* Submenu */}
               {item.submenu && (
@@ -103,29 +111,44 @@ export default function Navbar() {
           >
             {navItems.map((item, index) => (
               <div key={index}>
-                <div
-                  onClick={() => toggleSubmenu(index)}
-                  className="flex justify-between items-center cursor-pointer"
-                >
-                  <span>{item.name}</span>
-                  {item.submenu && <HiChevronDown size={16} />}
-                </div>
-                <AnimatePresence>
-                  {activeSubmenu === index && item.submenu && (
-                    <motion.ul
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="pl-4 mt-1 space-y-1 text-sm"
+                {item.scrollTo ? (
+                  <Link
+                    to={item.scrollTo}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    onClick={() => setIsOpen(false)}
+                    className="block py-2 cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <>
+                    <div
+                      onClick={() => toggleSubmenu(index)}
+                      className="flex justify-between items-center cursor-pointer"
                     >
-                      {item.submenu.map((sub, i) => (
-                        <li key={i} className="hover:text-pink-500">
-                          {sub}
-                        </li>
-                      ))}
-                    </motion.ul>
-                  )}
-                </AnimatePresence>
+                      <span>{item.name}</span>
+                      {item.submenu && <HiChevronDown size={16} />}
+                    </div>
+                    <AnimatePresence>
+                      {activeSubmenu === index && item.submenu && (
+                        <motion.ul
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="pl-4 mt-1 space-y-1 text-sm"
+                        >
+                          {item.submenu.map((sub, i) => (
+                            <li key={i} className="hover:text-pink-500">
+                              {sub}
+                            </li>
+                          ))}
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
+                  </>
+                )}
               </div>
             ))}
           </motion.ul>

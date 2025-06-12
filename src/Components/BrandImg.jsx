@@ -10,7 +10,7 @@ const brands = [
 ];
 
 const BrandMarquee = () => {
-  const duplicatedBrands = [...brands, ...brands]; // duplicate to ensure loop
+  const duplicatedBrands = [...brands, ...brands]; // duplicate to scroll
 
   return (
     <div className="w-full overflow-hidden bg-white py-6 relative group">
