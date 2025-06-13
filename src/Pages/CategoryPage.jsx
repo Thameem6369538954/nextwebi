@@ -41,7 +41,7 @@ export default function CategoryPage() {
 
   return (
     <motion.div
-      className="p-6 mt-20"
+      className="py-20 px-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

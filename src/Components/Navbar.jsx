@@ -38,8 +38,8 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto font-[poppins]">
         <Link to="/">
-        <h1 className="text-2xl font-bold text-pink-600">Nextwebi</h1>
-        </Link>
+  <h1 className="text-2xl font-bold text-pink-600">Nextwebi</h1>
+</Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8 text-gray-800 font-medium">

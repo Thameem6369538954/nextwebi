@@ -4,7 +4,7 @@ import HeroImage from "../assets/Images/portrait-young-japanese-woman-with-jacke
 export default function Hero() {
   return (
     <section className="bg-[#f8b9b2] min-h-screen flex items-center justify-center px-6 font-[poppins]">
-      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between mt-20">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between ">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

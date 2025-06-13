@@ -1,30 +1,44 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Allrouters from "./AllRouters/Allrouters";
 
 export default function App() {
   const scrollRef = useRef(null);
+  const locoScroll = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.1,
-    });
+    if (scrollRef.current) {
+      locoScroll.current = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.07,
+      });
+    }
 
     return () => {
-      scroll.destroy();
+      locoScroll.current?.destroy();
     };
   }, []);
 
+  // 👇 Update on route change
+  useEffect(() => {
+    setTimeout(() => {
+      locoScroll.current?.update();
+    }, 500); // wait for DOM updates
+  }, [location]);
+
   return (
-    <div ref={scrollRef} data-scroll-container className="bg-white text-black" 
-    >
+    <div data-scroll-container ref={scrollRef} className="bg-white text-black">
       <Navbar />
-      <Allrouters />
+      <main id="main-content">
+        <Allrouters />
+      </main>
       <Footer />
     </div>
   );
